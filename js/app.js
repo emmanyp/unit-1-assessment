@@ -29,9 +29,7 @@ function addResult() {
 }
 function minusResult() {
   let result = parseInt(input.value);
-  if (parseInt(initialCount.innerText) === 0) {
-    return initialCount.innerText = result -= parseInt(initialCount.innerText)
-	} else {
-    return (initialCount.innerText = parseInt(initialCount.innerText) - parseInt(input.value));
-  }
+  
+    initialCount.innerText = parseInt(initialCount.innerText) - parseInt(input.value);
+  
 }
