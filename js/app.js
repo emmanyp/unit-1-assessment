@@ -14,12 +14,24 @@ const plusBtn = document.querySelector('#plus');
 const minusBtn = document.querySelector('#minus');
 
 /*-------------- Event Listeners --------------*/
-plusBtn.addEventListener('click', () =>{
-  console.log('plus Btn clicked')
-})
-minusBtn.addEventListener('click', () =>{
-  console.log('minus Btn clicked')
-})
+plusBtn.addEventListener('click', addResult)
+minusBtn.addEventListener('click', minusResult)
 
 
 /*----------------- Functions -----------------*/
+
+function addResult() {
+  if (parseInt(initialCount.innerText) === 0) {
+    return initialCount.innerText = parseInt(input.value)
+	} else {
+    return initialCount.innerText =parseInt(input.value) + parseInt(initialCount.innerText)
+  }
+}
+function minusResult() {
+  let result = parseInt(input.value);
+  if (parseInt(initialCount.innerText) === 0) {
+    return initialCount.innerText = result -= parseInt(initialCount.innerText)
+	} else {
+    return (initialCount.innerText = parseInt(initialCount.innerText) - parseInt(input.value));
+  }
+}
